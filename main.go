@@ -1,10 +1,17 @@
 package main
 
 import (
+	"fmt"
 	"net/http"
 
 	"github.com/gin-gonic/gin"
 )
+
+var Version, BuildTime string
+
+func init() {
+	fmt.Printf("\nVersion: %s, BuildTime: %s\n", Version, BuildTime)
+}
 
 func main() {
 	router := gin.Default()
